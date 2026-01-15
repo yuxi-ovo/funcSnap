@@ -1,0 +1,80 @@
+{
+  "common": {
+    "switchLanguage": "切换语言",
+    "languageChanged": "语言已切换至{language}",
+    "itemCount": "没有项目 | 1个项目 | {count}个项目"
+  },
+  "nav": {
+    "brand": "CodeSnap",
+    "features": "功能特性",
+    "demo": "演示",
+    "install": "安装",
+    "mainNavigation": "主导航",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "hero": {
+    "title": "精美的代码截图",
+    "titleHighlight": "瞬间完成",
+    "subtitle": "捕获令人惊艳的代码截图，完美的语法高亮、行号和可自定义主题。精美地分享您的作品。",
+    "installButton": "安装扩展",
+    "learnMoreButton": "了解更多",
+    "installAriaLabel": "从VS Code市场安装CodeSnap扩展",
+    "learnMoreAriaLabel": "了解更多关于CodeSnap的功能",
+    "beforeLabel": "您的代码",
+    "afterLabel": "一键生成精美截图",
+    "screenshotAlt": "CodeSnap生成的代码截图示例",
+    "screenshotCaption": "✨ 自动添加语法高亮、行号和优雅的背景"
+  },
+  "features": {
+    "title": "强大功能",
+    "subtitle": "轻松捕获精美的代码截图。更多自定义选项即将推出。",
+    "listAriaLabel": "CodeSnap功能列表",
+    "captureFunction": {
+      "title": "捕获函数",
+      "description": "选择代码中的任何函数，生成带有语法高亮和行号的精美可分享截图。"
+    },
+    "selectionScreenshot": {
+      "title": "选区截图",
+      "description": "高亮代码的任何部分并立即捕获。非常适合文档、教程和代码审查。"
+    },
+    "copyFunction": {
+      "title": "复制函数内容",
+      "description": "快速将整个函数体复制到剪贴板。简化分享代码片段的工作流程。"
+    },
+    "customizableSettings": {
+      "title": "可自定义设置",
+      "description": "使用自定义主题、字体、内边距和背景颜色调整截图外观。定制每个细节以匹配您的风格。"
+    },
+    "vscodeIntegration": {
+      "title": "VS Code集成",
+      "description": "无缝集成到Visual Studio Code中。通过键盘快捷键和命令直接从编辑器访问所有功能。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 CodeSnap. 保留所有权利。",
+    "brand": "CodeSnap",
+    "brandDescription": "为开发者提供精美的代码截图。捕获、自定义并优雅地分享您的代码。",
+    "resources": "资源",
+    "community": "社区",
+    "documentation": "文档",
+    "github": "GitHub",
+    "marketplace": "VS Code 市场",
+    "support": "支持",
+    "twitter": "Twitter",
+    "discord": "Discord",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "demo": {
+    "heading": "实际演示",
+    "subtitle": "观看如何轻松捕获精美的代码截图",
+    "comingSoon": "演示视频或交互式预览即将推出"
+  },
+  "install": {
+    "heading": "立即开始",
+    "subtitle": "从 VS Code 市场安装 CodeSnap，开始创建精美的截图",
+    "button": "安装扩展",
+    "buttonAriaLabel": "从 VS Code 市场安装 CodeSnap 扩展"
+  }
+}

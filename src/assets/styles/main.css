@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  /* Global focus-visible styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Dark mode focus ring offset */
+  .dark *:focus-visible {
+    @apply ring-offset-slate-900;
+  }
+  
+  /* Ensure buttons and links have visible focus states */
+  button:focus-visible,
+  a:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 rounded-md;
+  }
+  
+  .dark button:focus-visible,
+  .dark a:focus-visible {
+    @apply ring-offset-slate-900;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    @apply backdrop-blur-lg bg-white/80 dark:bg-slate-900/80;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
