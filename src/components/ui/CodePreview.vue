@@ -62,7 +62,6 @@ const props = withDefaults(defineProps<CodePreviewProps>(), {
   filename: 'example.ts',
   startLine: 1,
   animated: true,
-  theme: 'one-dark',
 });
 
 const themeStore = useThemeStore();

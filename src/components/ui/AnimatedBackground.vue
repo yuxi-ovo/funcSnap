@@ -12,7 +12,7 @@
     
     <!-- Floating Particles -->
     <div class="particles">
-      <div v-for="i in 20" :key="i" class="particle" :style="getParticleStyle(i)"></div>
+      <div v-for="i in 20" :key="i" class="particle" :style="getParticleStyle"></div>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@
  * - Floating particles
  */
 
-const getParticleStyle = (index: number) => {
+const getParticleStyle = () => {
   const size = Math.random() * 4 + 2;
   const left = Math.random() * 100;
   const animationDuration = Math.random() * 20 + 10;

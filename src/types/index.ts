@@ -78,7 +78,6 @@ export interface NavBarProps {}
 export interface HeroSectionProps {}
 
 // FeaturesSection component props (no props needed)
-export interface FeaturesSectionProps {}
+export interface FeaturesSectionProp { }
 
-// Footer component props (no props needed)
 export interface FooterProps {}
