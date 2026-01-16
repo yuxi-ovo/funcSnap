@@ -4,7 +4,7 @@
     <NavBar />
     
     <!-- Hero Section -->
-    <section id="hero" class="bg-white dark:bg-slate-900 mt-20">
+    <section id="hero" class="bg-white dark:bg-slate-900 transition-colors duration-300">
       <HeroSection />
     </section>
     

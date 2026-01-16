@@ -1,12 +1,22 @@
 <template>
   <section 
     id="features" 
-    class="py-24 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+    class="relative py-24 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden"
     aria-labelledby="features-heading"
   >
-    <div class="max-w-7xl mx-auto">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-30 dark:opacity-20">
+      <div class="absolute inset-0 dot-pattern"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Section Header with animation -->
+      <div 
+        v-motion
+        :initial="{ opacity: 0, y: 30 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+        class="text-center mb-16"
+      >
         <h2 
           id="features-heading"
           class="text-4xl lg:text-5xl font-bold font-heading mb-4 text-slate-900 dark:text-slate-100 transition-colors duration-300"
@@ -20,22 +30,29 @@
         </p>
       </div>
 
-      <!-- Bento Grid Layout -->
+      <!-- Bento Grid Layout with stagger animation -->
       <div 
         class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         role="list"
         :aria-label="t('features.listAriaLabel')"
       >
-        <FeatureCard
-          v-for="feature in features"
+        <div
+          v-for="(feature, index) in features"
           :key="feature.id"
-          :title="feature.title"
-          :description="feature.description"
-          :icon="feature.icon"
-          :gridClass="feature.gridClass"
-          :preview="feature.preview"
-          role="listitem"
-        />
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: index * 100 } }"
+          :class="feature.gridClass"
+        >
+          <FeatureCard
+            :title="feature.title"
+            :description="feature.description"
+            :icon="feature.icon"
+            :gridClass="feature.gridClass"
+            :preview="feature.preview"
+            role="listitem"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -127,6 +144,17 @@ const features = computed<Feature[]>(() => [
 </script>
 
 <style scoped>
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgb(148 163 184 / 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Dark mode dot pattern - use darker dots on dark background */
+:global(.dark) .dot-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgb(71 85 105 / 0.4) 1px, transparent 0);
+}
+
 /* Ensure grid respects responsive breakpoints */
 @media (min-width: 1024px) {
   .grid {

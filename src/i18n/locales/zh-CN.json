@@ -5,7 +5,7 @@
     "itemCount": "没有项目 | 1个项目 | {count}个项目"
   },
   "nav": {
-    "brand": "CodeSnap",
+    "brand": "FuncSnap",
     "features": "功能特性",
     "demo": "演示",
     "install": "安装",
@@ -17,6 +17,7 @@
     "title": "精美的代码截图",
     "titleHighlight": "瞬间完成",
     "subtitle": "捕获令人惊艳的代码截图，完美的语法高亮、行号和可自定义主题。精美地分享您的作品。",
+    "badge": "🚀 VS Code 扩展",
     "installButton": "安装扩展",
     "learnMoreButton": "了解更多",
     "installAriaLabel": "从VS Code市场安装CodeSnap扩展",
@@ -24,7 +25,8 @@
     "beforeLabel": "您的代码",
     "afterLabel": "一键生成精美截图",
     "screenshotAlt": "CodeSnap生成的代码截图示例",
-    "screenshotCaption": "✨ 自动添加语法高亮、行号和优雅的背景"
+    "screenshotCaption": "✨ 自动添加语法高亮、行号和优雅的背景",
+    "scrollHint": "向下滚动探索更多"
   },
   "features": {
     "title": "强大功能",
@@ -52,8 +54,8 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 CodeSnap. 保留所有权利。",
-    "brand": "CodeSnap",
+    "copyright": "© 2024 FuncSnap. 保留所有权利。",
+    "brand": "FuncSnap",
     "brandDescription": "为开发者提供精美的代码截图。捕获、自定义并优雅地分享您的代码。",
     "resources": "资源",
     "community": "社区",

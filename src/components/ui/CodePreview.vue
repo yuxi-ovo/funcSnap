@@ -1,5 +1,8 @@
 <template>
-  <div class="code-preview rounded-lg overflow-hidden shadow-xl">
+  <div class="code-preview h-full flex flex-col rounded-lg overflow-hidden shadow-xl 
+              border border-slate-200 dark:border-slate-700
+              transition-all duration-500
+              hover:shadow-2xl hover:scale-[1.02] hover:border-blue-300 dark:hover:border-blue-500/50">
     <!-- Header: Filename -->
     <div 
       class="px-4 py-2 border-b bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-700 transition-colors duration-300"
@@ -13,7 +16,7 @@
     
     <!-- Code Content with Line Numbers -->
     <div 
-      class="flex bg-white dark:bg-[#0D1117] transition-colors duration-300"
+      class="flex flex-1 bg-white dark:bg-[#0D1117] transition-colors duration-300"
     >
       <!-- Line Numbers -->
       <div 

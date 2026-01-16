@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import type { NavigationLink, FooterProps } from '@/types';
 
@@ -17,19 +18,19 @@ defineProps<FooterProps>();
 
 const { t } = useI18n();
 
-// Footer navigation links
-const footerLinks: NavigationLink[] = [
+// Footer navigation links - use computed for reactivity
+const footerLinks = computed<NavigationLink[]>(() => [
   { label: t('footer.documentation'), href: '#docs', external: false },
   { label: t('footer.github'), href: 'https://github.com', external: true },
   { label: t('footer.marketplace'), href: 'https://marketplace.visualstudio.com/', external: true },
   { label: t('footer.support'), href: '#support', external: false }
-];
+]);
 
-// Social/community links
-const socialLinks: NavigationLink[] = [
+// Social/community links - use computed for reactivity
+const socialLinks = computed<NavigationLink[]>(() => [
   { label: t('footer.twitter'), href: 'https://twitter.com', external: true },
   { label: t('footer.discord'), href: 'https://discord.com', external: true }
-];
+]);
 </script>
 
 <template>
@@ -45,31 +46,8 @@ const socialLinks: NavigationLink[] = [
         <!-- Brand section -->
         <div class="space-y-4">
           <div class="flex items-center space-x-2">
-            <div 
-              class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 
-                     rounded-lg flex items-center justify-center"
-            >
-              <svg 
-                class="w-5 h-5 text-white" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                />
-                <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-            </div>
+              <img src="../../assets/images/logo.png" class="w-9">
+
             <span 
               class="font-heading font-bold text-lg text-slate-900 dark:text-slate-100"
             >

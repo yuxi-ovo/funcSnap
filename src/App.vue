@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ 'dark': themeStore.isDark }" class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+  <div id="app" class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
     <router-view />
   </div>
 </template>
